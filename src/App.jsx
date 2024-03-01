@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import UserCard from "./components/UserCard"
 import SearchBar from "./components/SearchBar"
+import ThemeButton from "./components/ThemeButton"
 
 const App = () => {
   const [username, setUsername] = useState("")
@@ -27,12 +28,16 @@ const App = () => {
     setUsername(event.target.value)
   }
 
-  const handleTheme = () => {
+  const handleClick = () => {
     setTheme(prevTheme => prevTheme === "light" ? "dark" : "light")
   }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-5 bg-gray-900">
+      <div className="absolute top-5 right-5">
+        <ThemeButton handleClick={handleClick} />
+      </div>
+      
       <SearchBar 
         placeholder="GitHub username..."
         handleChange={handleChange}

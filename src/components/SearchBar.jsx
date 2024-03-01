@@ -15,7 +15,7 @@ const SearchBar = ({ placeholder, handleChange, handleSubmit }) => {
       />
       <button
         type="submit"
-        className="w-1/4 text-2xl border-l-2 border-gray-700 bg-slate-900 text-gray-500 rounded-r-lg hover:bg-slate-800 duration-200"
+        className="w-1/4 text-2xl border-l-2 border-gray-700 bg-slate-900 text-gray-500 rounded-r-lg hover:bg-slate-800 hover:duration-200"
       >
        <FontAwesomeIcon icon={faMagnifyingGlass} />
       </button>    
