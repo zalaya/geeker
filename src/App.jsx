@@ -1,10 +1,19 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import UserCard from "./components/UserCard"
 import SearchBar from "./components/SearchBar"
 
 const App = () => {
   const [username, setUsername] = useState("")
   const [user, setUser] = useState(null)
+  const [theme, setTheme] = useState("dark")
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.querySelector("html").classList.add("dark")
+    } else {
+      document.querySelector("html").classList.remove("dark")
+    }
+  }, [theme])
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -16,6 +25,10 @@ const App = () => {
 
   const handleChange = (event) => {
     setUsername(event.target.value)
+  }
+
+  const handleTheme = () => {
+    setTheme(prevTheme => prevTheme === "light" ? "dark" : "light")
   }
 
   return (
