@@ -32,10 +32,17 @@ const App = () => {
     setTheme(prevTheme => prevTheme === "light" ? "dark" : "light")
   }
 
+  const capitalize = (text) => {
+    return text.charAt(0).toUpperCase() + text.slice(1)
+  }
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-5 dark:bg-gray-900 bg-gray-50">
       <div className="absolute top-5 right-5">
-        <ThemeButton handleClick={handleClick} />
+        <ThemeButton 
+          handleClick={handleClick} 
+          content={capitalize(theme)}
+        />
       </div>
       
       <SearchBar 
