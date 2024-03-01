@@ -1,8 +1,16 @@
-const SearchBar = () => {
+const SearchBar = ({ placeholder, handleChange, handleSubmit }) => {
   return (
-    <form>
-      <input type="text" />
-      <button></button>
+    <form onSubmit={handleSubmit}>
+      <input 
+        type="text"
+        placeholder={placeholder}
+        onChange={handleChange}
+      />
+      <button
+        type="submit"
+      >
+        Search
+      </button>
     </form>
   )
 }

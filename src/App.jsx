@@ -2,7 +2,9 @@ import SearchBar from "./components/SearchBar"
 
 const App = () => {
   return (
-    <SearchBar />
+    <SearchBar
+      placeholder="GitHub username..."
+    />
   )
 }
 
