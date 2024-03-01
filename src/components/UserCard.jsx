@@ -1,7 +1,7 @@
 const UserCard = ({ user }) => {
   return (
     <div className="w-1/4 p-5 rounded-lg border dark:border-gray-700 border-gray-300 dark:bg-slate-900 bg-gray-50 shadow-xl">
-      <a href={user.html_url}>
+      <a href={user.html_url} target="_blank" rel="noopener noreferrer">
         <div className="flex gap-5">
           <img 
             src={user.avatar_url} 
