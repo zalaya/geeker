@@ -1,6 +1,6 @@
 const UserCard = ({ user }) => {
   return (
-    <div className="w-1/4 p-5 rounded-lg border border-gray-700 bg-slate-900 shadow-xl">
+    <div className="w-1/4 p-5 rounded-lg border dark:border-gray-700 border-gray-300 dark:bg-slate-900 bg-gray-50 shadow-xl">
       <a href={user.html_url}>
         <div className="flex gap-5">
           <img 
@@ -10,7 +10,7 @@ const UserCard = ({ user }) => {
           />
           <p className="text-xl font-semibold">
             <span className="text-gray-500">{user.login}/</span>
-            <span className="text-gray-300"> {user.name}</span>
+            <span className="text-gray-400"> {user.name}</span>
           </p>
         </div>
         <p className="text-sm text-gray-500 mt-5">

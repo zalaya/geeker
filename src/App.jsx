@@ -6,7 +6,7 @@ import ThemeButton from "./components/ThemeButton"
 const App = () => {
   const [username, setUsername] = useState("")
   const [user, setUser] = useState(null)
-  const [theme, setTheme] = useState("dark")
+  const [theme, setTheme] = useState("light")
 
   useEffect(() => {
     if (theme === "dark") {
@@ -33,7 +33,7 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-5 bg-gray-900">
+    <div className="min-h-screen flex flex-col items-center justify-center gap-5 dark:bg-gray-900 bg-gray-50">
       <div className="absolute top-5 right-5">
         <ThemeButton handleClick={handleClick} />
       </div>
